@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+        .container {
+            width: 450px;
+            background: #ffffff;
+            padding: 20px;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #aaa;
+        }
+        h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 6px;
+            margin: 5px 0 15px 0;
+        }
+        .radio-group, .checkbox-group {
+            margin-bottom: 15px;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+        input[type="submit"] {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Student Registration Form</h2>
+
+    <form>
+
+        <!-- Name -->
+        <label>Name:</label>
+        <input type="text" name="name" required placeholder="Enter your name">
+
+        <!-- Email -->
+        <label>E-mail ID:</label>
+        <input type="email" name="email" required placeholder="Enter your email">
+
+        <!-- Phone -->
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" pattern="[0-9]{10}" required placeholder="10-digit number">
+
+        <!-- Gender -->
+        <label>Gender:</label>
+        <div class="radio-group">
+            <input type="radio" name="gender" required> Male
+            <input type="radio" name="gender"> Female
+        </div>
+
+        <!-- Date of Birth -->
+        <label>Date of Birth:</label>
+        <select required>
+            <option value="">Day</option>
+            <option>1</option><option>2</option><option>3</option>
+            <option>4</option><option>5</option><option>6</option>
+            <option>7</option><option>8</option><option>9</option>
+            <option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option>
+            <option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option>
+            <option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+        </select>
+
+        <select required>
+            <option value="">Month</option>
+            <option>Jan</option><option>Feb</option><option>Mar</option>
+            <option>Apr</option><option>May</option><option>Jun</option>
+            <option>Jul</option><option>Aug</option><option>Sep</option>
+            <option>Oct</option><option>Nov</option><option>Dec</option>
+        </select>
+
+        <select required>
+            <option value="">Year</option>
+            <option>2000</option><option>2001</option><option>2002</option>
+            <option>2003</option><option>2004</option><option>2005</option><option>2006</option>
+        </select>
+
+        <!-- Languages -->
+        <label>Languages Known:</label>
+        <div class="checkbox-group">
+            <input type="checkbox"> English
+            <input type="checkbox"> Hindi
+        </div>
+
+        <!-- Address -->
+        <label>Address:</label>
+        <textarea rows="3" required placeholder="Enter address"></textarea>
+
+        <!-- Subjects -->
+        <label>Subjects:</label>
+        <div class="radio-group">
+            <input type="radio" name="subject" required> Science
+            <input type="radio" name="subject"> Commerce
+            <input type="radio" name="subject"> Arts
+        </div>
+
+        <!-- Submit -->
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
+
+</body>
+</html>

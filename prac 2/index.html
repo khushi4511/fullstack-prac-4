@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Khushi Jain | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0f1026, #1b1d4f);
+      color: #fff;
+    }
+
+    /* HEADER */
+    .top-header {
+      text-align: center;
+      padding: 70px 20px 40px;
+    }
+
+    .top-header h1 {
+      font-size: 2.8rem;
+      color: #ff9ad5;
+      transition: 0.3s;
+    }
+
+    .top-header h1:hover {
+      letter-spacing: 3px;
+      color: #7b7cff;
+    }
+
+    .top-header p {
+      color: #cbd0ff;
+      margin-top: 10px;
+    }
+
+    /* NAVBAR */
+    .nav-bar {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 15px;
+      background: rgba(0,0,0,0.35);
+    }
+
+    .nav-bar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-bar a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 0%;
+      height: 2px;
+      background: #7b7cff;
+      transition: 0.3s;
+    }
+
+    .nav-bar a:hover::after,
+    .nav-bar a.active::after {
+      width: 100%;
+    }
+
+    /* MAIN */
+    .page-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 70px 20px;
+      display: grid;
+      place-items: center;
+    }
+
+    /* PROFILE CARD */
+    .profile-card {
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(16px);
+      border-radius: 25px;
+      padding: 50px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 50px;
+      transition: 0.4s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 60px rgba(123,124,255,0.6);
+    }
+
+    /* IMAGE */
+    .profile-image img {
+      width: 100%;
+      border-radius: 20px;
+      transition: 0.4s;
+    }
+
+    .profile-image img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 35px rgba(255,154,213,0.6);
+    }
+
+    /* ABOUT */
+    .profile-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .profile-text h2 {
+      color: #ff9ad5;
+      font-size: 2rem;
+      margin-bottom: 15px;
+      transition: 0.3s;
+    }
+
+    .profile-text h2:hover {
+      color: #7b7cff;
+      letter-spacing: 1px;
+    }
+
+    .profile-text p {
+      margin-bottom: 14px;
+      line-height: 1.7;
+      color: #e6e6ff;
+      transition: 0.3s;
+    }
+
+    .profile-text p:hover {
+      transform: translateX(6px);
+    }
+
+    /* CONTACT BUTTONS */
+    .contact-links {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .contact-links a {
+      padding: 10px 22px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: white;
+      background: linear-gradient(45deg, #7b7cff, #ff9ad5);
+      transition: 0.3s;
+    }
+
+    .contact-links a:hover {
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(123,124,255,0.6);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .profile-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .contact-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="top-header">
+  <h1>Khushi Jain</h1>
+  <p>B.Sc (Hons) Cybersecurity · Student</p>
+</header>
+
+<nav class="nav-bar">
+  <a href="index.html" class="active">About</a>
+  <a href="skills.html">Skills</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<main class="page-container">
+  <section class="profile-card">
+
+    <div class="profile-image">
+      <img src="profile.jpg.jpeg" alt="Khushi Jain">
+    </div>
+
+    <div class="profile-text">
+      <h2>About Me</h2>
+
+      <p>
+        I’m a cybersecurity student passionate about secure systems,
+        creative UI design, and front-end development.
+      </p>
+
+      <p>
+        I enjoy working with HTML, CSS, Python, and Linux while constantly
+        improving my technical skills.
+      </p>
+
+      <p>
+        My goal is to build a career in cybersecurity and help create
+        secure digital environments.
+      </p>
+
+      <div class="contact-links">
+        <a href="contact.html">Contact Me</a>
+        <a href="mailto:kkhushi4512@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/">LinkedIn</a>
+        <a href="khushi jain cv.pdf" download>Resume</a>
+      </div>
+    </div>
+
+  </section>
+</main>
+
+</body>
+</html>
