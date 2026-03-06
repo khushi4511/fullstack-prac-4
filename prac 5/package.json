@@ -1,0 +1,13 @@
+{
+  "name": "prac5-backend",
+  "version": "1.0.0",
+  "description": "Practical 5 Backend APIs",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^8.0.0"
+  }
+}
